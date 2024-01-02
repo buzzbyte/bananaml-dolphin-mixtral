@@ -2,4 +2,4 @@ potassium
 torch
 transformers
 autoawq
-typing-extensions
+typing_extensions==4.4.0
