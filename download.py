@@ -3,8 +3,8 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 
 def download_model() -> tuple:
     """Download the model and tokenizer."""
-    model = AutoModelForCausalLM.from_pretrained("mistralai/Mistral-7B-Instruct-v0.1")
-    tokenizer = AutoTokenizer.from_pretrained("mistralai/Mistral-7B-Instruct-v0.1")
+    model = AutoModelForCausalLM.from_pretrained("TheBloke/dolphin-2.7-mixtral-8x7b-AWQ")
+    tokenizer = AutoTokenizer.from_pretrained("TheBloke/dolphin-2.7-mixtral-8x7b-AWQ")
     return model, tokenizer
 
 if __name__ == "__main__":
