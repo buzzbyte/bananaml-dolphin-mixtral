@@ -1,18 +1,17 @@
 from potassium import Potassium, Request, Response
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-app = Potassium("mistral-7b-instruct-v0.1")
+app = Potassium("dolphin-2.6-mixtral-8x7b")
 
 @app.init
 def init() -> dict:
     """Initialize the application with the model and tokenizer."""
-    model = AutoModelForCausalLM.from_pretrained("mistralai/Mistral-7B-Instruct-v0.1")
-    tokenizer = AutoTokenizer.from_pretrained("mistralai/Mistral-7B-Instruct-v0.1")
-    context = {
+    model = AutoModelForCausalLM.from_pretrained("cognitivecomputations/dolphin-2.6-mixtral-8x7b")
+    tokenizer = AutoTokenizer.from_pretrained("cognitivecomputations/dolphin-2.6-mixtral-8x7b")
+    return {
         "model": model,
         "tokenizer": tokenizer
     }
-    return context
 
 @app.handler("/")
 def handler(context: dict, request: Request) -> Response:
