@@ -6,8 +6,12 @@ app = Potassium("dolphin-2.6-mixtral-8x7b")
 @app.init
 def init() -> dict:
     """Initialize the application with the model and tokenizer."""
-    model = AutoModelForCausalLM.from_pretrained("cognitivecomputations/dolphin-2.6-mixtral-8x7b")
-    tokenizer = AutoTokenizer.from_pretrained("cognitivecomputations/dolphin-2.6-mixtral-8x7b")
+    #model = AutoModelForCausalLM.from_pretrained("cognitivecomputations/dolphin-2.6-mixtral-8x7b")
+    #tokenizer = AutoTokenizer.from_pretrained("cognitivecomputations/dolphin-2.6-mixtral-8x7b")
+    model = AutoModelForCausalLM.from_pretrained("TheBloke/dolphin-2.7-mixtral-8x7b-AWQ")
+    tokenizer = AutoTokenizer.from_pretrained("TheBloke/dolphin-2.7-mixtral-8x7b-AWQ")
+    
+    #model = AutoModel.from_pretrained("TheBloke/dolphin-2.6-mixtral-8x7b-GGUF")
     return {
         "model": model,
         "tokenizer": tokenizer
