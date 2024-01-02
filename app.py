@@ -10,6 +10,7 @@ def init() -> dict:
     #tokenizer = AutoTokenizer.from_pretrained("cognitivecomputations/dolphin-2.6-mixtral-8x7b")
     model = AutoModelForCausalLM.from_pretrained("TheBloke/dolphin-2.7-mixtral-8x7b-AWQ")
     tokenizer = AutoTokenizer.from_pretrained("TheBloke/dolphin-2.7-mixtral-8x7b-AWQ")
+    model.to(torch.device("cuda"))
     
     #model = AutoModel.from_pretrained("TheBloke/dolphin-2.6-mixtral-8x7b-GGUF")
     return {
