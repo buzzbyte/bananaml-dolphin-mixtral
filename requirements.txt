@@ -1,2 +1,4 @@
 potassium
 torch
+transformers
+autoawq
